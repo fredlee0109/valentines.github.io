@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saeyeon, Will You Be My Valentines?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio
+      id="bg-music"
+      preload="auto"
+      src="https://cdn.pixabay.com/audio/2022/03/15/audio_5d9b6f0a07.mp3"
+    ></audio>
+
+    <main class="page">
+      <header class="hero">
+        <p class="tag">💘 A very important question 💘</p>
+        <h1>Saeyeon, will you be my valentines?</h1>
+        <p class="subtitle">
+          Move your mouse around for sparkles. I made this with all my heart.
+        </p>
+      </header>
+
+      <section class="card">
+        <div class="photo-grid">
+          <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80"
+            alt="Pink flowers"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=500&q=80"
+            alt="Pastel hearts"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=500&q=80"
+            alt="Candy hearts"
+          />
+        </div>
+
+        <div class="prompt">
+          <p>
+            I have a song ready, a sky full of hearts, and a single question for
+            you.
+          </p>
+          <div class="buttons" id="button-zone">
+            <button class="btn yes" id="yes-btn">YES 💖</button>
+            <button class="btn no" id="no-btn">no</button>
+          </div>
+          <p class="hint">(Try to click no if you dare!)</p>
+        </div>
+      </section>
+
+      <section class="celebration" id="celebration" aria-live="polite">
+        <h2>She said YES! 🎉</h2>
+        <img
+          src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif"
+          alt="Happy celebration"
+        />
+        <p>
+          Yay! You just made my whole heart do a happy dance. Happy Valentine’s
+          Day, Saeyeon!
+        </p>
+      </section>
+    </main>
+
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
