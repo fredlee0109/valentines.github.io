@@ -19,8 +19,7 @@ const moveNoButton = () => {
   const nextX = randomBetween(0, Math.max(maxX, 0));
   const nextY = randomBetween(0, Math.max(maxY, 0));
 
-  noButton.style.left = `${nextX}px`;
-  noButton.style.top = `${nextY}px`;
+  noButton.style.transform = `translate(${nextX}px, ${nextY}px)`;
 };
 
 const createHeart = (x, y) => {
@@ -46,6 +45,10 @@ const handleMouseMove = (event) => {
 };
 
 const checkNoButtonDistance = (event) => {
+  if (noButton.classList.contains("moving")) {
+    return;
+  }
+
   const rect = noButton.getBoundingClientRect();
   const distanceX = Math.abs(event.clientX - (rect.left + rect.width / 2));
   const distanceY = Math.abs(event.clientY - (rect.top + rect.height / 2));
@@ -74,6 +77,12 @@ window.addEventListener("mousemove", (event) => {
 
 noButton.addEventListener("mouseenter", moveNoButton);
 noButton.addEventListener("click", moveNoButton);
+noButton.addEventListener("transitionstart", () => {
+  noButton.classList.add("moving");
+});
+noButton.addEventListener("transitionend", () => {
+  noButton.classList.remove("moving");
+});
 
 yesButton.addEventListener("click", showCelebration);
 
